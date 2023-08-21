@@ -1,0 +1,74 @@
+html{
+    font-size: 62.5%;;
+}
+body{
+    font-family: sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    color: #333;
+    background-image: linear-gradient(to top left, #9d43ad , #bf2e34 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*sağdan solda ortala*/
+
+}
+/*layout*/
+main{
+    position: relative;
+    width: 100rem;
+    height: 60rem;
+    background-color: rgba(255,255,255,0.35);
+    backdrop-filter: blue(200px);
+    filter :blur();
+    box-shadow: 0 3rem 5rem rgba(0,0,0, 0.25);
+    /*gölgelenme için*/
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;/*alt alta olan itemlar yan yana geçti*/
+}
+.player{
+    flex:50%;
+    padding: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    transition: all 0.75s;
+}
+/*element*/
+.name{
+    position: relative;
+    font-size: 4rem;
+    text-transform:  uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight:  300;
+    margin-bottom:  1rem;
+}
+
+.score{
+    font-size: 8rem;
+    font-weight: 300;
+    color:#c7365f;
+    margin-bottom: auto;
+}
+.player--active{
+    background-color: rgba(255,255,255, 0.4);
+}
+.player--active .name{
+    font-weight: 750;
+}
+.player--active .score{
+    font-weight: 500;
+}
+.player--active .current{
+    opacity: 1;
+}
+.current{
+    background-color: #c7365f;
+    opacity: 0.8;
+    border-radius: 9px;
+    color:#fff;
+    width: 65%;
+    padding: 2rem;
+}
